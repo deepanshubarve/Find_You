@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var cameraButton = findViewById<Button>(R.id.camerabtn)
+
 
         cameraButton.setOnClickListener {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -69,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                 if(faces.isEmpty()){
                     Toast.makeText(this,"NO FACES DETECTED",Toast.LENGTH_SHORT).show()
                 }else{
+                    var resultLayout = findViewById<TextView>(R.id.result)
                     Toast.makeText(this,resultText,Toast.LENGTH_LONG).show()
                 }
             }

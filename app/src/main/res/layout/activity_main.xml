@@ -9,12 +9,22 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TextView" />
+
     <Button
         android:id="@+id/camerabtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detect Face"
-        android:layout_marginTop="150dp"
         android:layout_marginLeft="150dp"
-        android:padding="10dp"/>
+        android:layout_marginTop="300dp"
+        android:padding="10dp"
+        android:text="Detect Face" />
+
 </LinearLayout>
